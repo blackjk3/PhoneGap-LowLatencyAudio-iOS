@@ -5,7 +5,7 @@
     id="com.phonegap.plugins.lowlatencyaudio"
     version="2.0.0">
 
-    <name>InAppPurchase</name>
+    <name>LowLatencyAudio</name>
 
     <engines>
         <engine name="cordova" version=">=2.4.0" />
