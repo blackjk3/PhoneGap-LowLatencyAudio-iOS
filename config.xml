@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.phonegap.plugins.lowlatencyaudio"
+    version="2.0.0">
+
+    <name>InAppPurchase</name>
+
+    <engines>
+        <engine name="cordova" version=">=2.4.0" />
+    </engines>
+
+    <js-module src="LowLatencyAudio.js" name="LowLatencyAudio">
+        <clobbers target="window.LowLatencyAudio" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <!-- Cordova 2.2 -->
+        <plugins-plist key="LowLatencyAudio" string="LowLatencyAudio" />
+                    
+        <!-- Cordova 2.5+ -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="LowLatencyAudio">
+                <param name="ios-package" value="LowLatencyAudio"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/LowLatencyAudio.h" />
+        <source-file src="src/ios/LowLatencyAudio.m" />
+        <header-file src="src/ios/LowLatencyAudioAsset.h" />
+        <source-file src="src/ios/LowLatencyAudioAsset.m" />
+    </platform>
+</plugin>
