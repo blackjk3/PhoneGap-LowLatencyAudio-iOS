@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin
-    xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.phonegap.plugins.lowlatencyaudio"
-    version="2.0.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="com.phonegap.plugins.lowlatencyaudio"
+      version="0.1.0">    
 
     <name>LowLatencyAudio</name>
 
@@ -23,7 +21,7 @@
         <!-- Cordova 2.5+ -->
         <config-file target="config.xml" parent="/*">
             <feature name="LowLatencyAudio">
-                <param name="ios-package" value="LowLatencyAudio"/>
+                <param name="ios-package" value="com.phonegap.plugins.lowlatencyaudio.LowLatencyAudio"/>
             </feature>
         </config-file>
 

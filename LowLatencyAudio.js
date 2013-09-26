@@ -1,30 +1,28 @@
-var argscheck = require('cordova/argscheck'),
-    utils = require('cordova/utils'),
-    exec = require('cordova/exec');
+var exec = require('cordova/exec')
 
 var LowLatencyAudio = {
   preloadFX: function ( id, assetPath, success, fail) {
-    return exec(success, fail, "LowLatencyAudio", "preloadFX", [id, assetPath]);
+    return cordova.exec(success, fail, "LowLatencyAudio", "preloadFX", [id, assetPath]);
   },
       
   preloadAudio: function ( id, assetPath, voices, success, fail) {
-    return exec(success, fail, "LowLatencyAudio", "preloadAudio", [id, assetPath, voices]);
+    return cordova.exec(success, fail, "LowLatencyAudio", "preloadAudio", [id, assetPath, voices]);
   },
       
   play: function (id, success, fail) {
-    return exec(success, fail, "LowLatencyAudio", "play", [id]);
+    return cordova.exec(success, fail, "LowLatencyAudio", "play", [id]);
   },
       
   stop: function (id, success, fail) {
-    return exec(success, fail, "LowLatencyAudio", "stop", [id]);
+    return cordova.exec(success, fail, "LowLatencyAudio", "stop", [id]);
   },
       
   loop: function (id, success, fail) {
-    return exec(success, fail, "LowLatencyAudio", "loop", [id]);
+    return cordova.exec(success, fail, "LowLatencyAudio", "loop", [id]);
   },
       
   unload: function (id, success, fail) {
-    return exec(success, fail, "LowLatencyAudio", "unload", [id]);
+    return cordova.exec(success, fail, "LowLatencyAudio", "unload", [id]);
   }
 };
 
